@@ -44,7 +44,7 @@ if(isset($_GET['id'])) {
             <textarea rows="10" name="body" placeholder="Metin"><?= $post['body'] ?></textarea>
             <div class="form__control inline">
                 <input type="checkbox" name="is_featured" id="is_featured" value="1" <?= ($post['is_featured'] == 1) ? 'checked' : '' ?>>
-                <label for="is_featured">Seçme</label>
+                <label for="is_featured">Öne Çıkan</label>
             </div>
             <div class="form__control">
                 <label for="thumbnail">Küçük resmi değiştir</label>

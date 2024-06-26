@@ -11,13 +11,11 @@ if(isset($_GET['id'])) {
         $category = mysqli_fetch_assoc($result);
     }
 } else {
-    header('location: ' . ROOT_URL . 'admin/manage-categories');
+    header('location: ' . ROOT_URL . 'admin/manage-categories.php');
     die();
 }
 
 ?>
-
-
 
 <section class="form__section">
     <div class="container form__section-container">
@@ -27,14 +25,9 @@ if(isset($_GET['id'])) {
             <input type="hidden" name="id" value="<?= $category['id'] ?>">
             <input type="text" name="title" value="<?= $category['title'] ?>" placeholder="Başlık">
             <textarea  rows="4" name="description" placeholder="Tanım"><?= $category['description'] ?></textarea>
-            <button type="submit" class="btn">Kategoriyi güncelle</button>
-            
+            <button type="submit" class="btn" name="submit">Kategoriyi güncelle</button>
         </form>
     </div>
 </section>
 
-
-<?php
-include '../partials/footer.php';
-
-?>
+<?php include '../partials/footer.php'; ?>

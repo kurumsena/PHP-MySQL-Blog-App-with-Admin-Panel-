@@ -1,14 +1,16 @@
 <?php
+session_start();
 require 'config/database.php';
 
 // fetch current user from database
- if (isset($_SESSION['user-id'])) {
+if (isset($_SESSION['user-id'])) {
     $id = filter_var($_SESSION['user-id'], FILTER_SANITIZE_NUMBER_INT);
     $query = "SELECT avatar FROM users WHERE id=$id";
     $result = mysqli_query($connection, $query);
-    $avatar = mysqli_fetch_assoc($result);
-
- }
+    if ($result) {
+        $avatar = mysqli_fetch_assoc($result);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +29,6 @@ require 'config/database.php';
         rel="stylesheet">
 </head>
 
- 
 <body>
     <nav>
         <div class="container nav__container">
@@ -40,19 +41,16 @@ require 'config/database.php';
                 <?php if(isset($_SESSION['user-id'])): ?>
                 <li class="nav__profile">
                     <div class="avatar">
-                        <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>">
+                        <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>" alt="User Avatar">
                     </div>
-
                     <ul>
                         <li><a href="<?= ROOT_URL ?>admin/index.php">Kontrol Paneli</a></li>
                         <li><a href="<?= ROOT_URL ?>logout.php">Çıkış Yap</a></li>
                     </ul>
-
                 </li>
-                <?php else : ?>
+                <?php else: ?>
                 <li><a href="<?= ROOT_URL ?>signin.php">Giriş Yap</a></li>
                 <?php endif ?>
-
             </ul>
             <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
             <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>

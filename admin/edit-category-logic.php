@@ -1,26 +1,29 @@
-<?php 
+<?php
+session_start();
 require 'config/database.php';
 
 if(isset($_POST['submit'])) {
     $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
-    $title = filter_var($_POST['title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $description = filter_var($_POST['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $title = mysqli_real_escape_string($connection, $_POST['title']);
+    $description = mysqli_real_escape_string($connection, $_POST['description']);
 
-
-    // validate input 
-    if(!$title || !$description) {
-        $_SESSION['edit-category'] = "Kategori düzenleme sayfasında geçersiz form girişi";
+    // Validate input
+    if(empty($title) || empty($description)) {
+        $_SESSION['edit-category'] = "Kategori düzenleme sayfasında eksik form girişi";
     } else {
-        $query = "UPDATE categories SET title='$title', description='$description' WHERE id=$id LIMIT 1";
+        $query = "UPDATE categories SET title='$title', description='$description' WHERE id=$id";
         $result = mysqli_query($connection, $query);
         
-        if(mysqli_errno($connection)) {
-            $_SESSION['edit-category'] = "Kategori güncellenemedi";
+        if($result) {
+            $_SESSION['edit-category-success'] = "Kategori başarıyla güncellendi";
         } else {
-            $_SESSION['edit-category-success'] = "Kategori $title güncelleme başarılı";
+            $_SESSION['edit-category'] = "Kategori güncellenirken hata oluştu: " . mysqli_error($connection);
         }
     }
+} else {
+    $_SESSION['edit-category'] = "Form gönderimi bekleniyor";
 }
 
 header('location: ' . ROOT_URL . 'admin/manage-categories.php');
-die();
+exit();
+?>

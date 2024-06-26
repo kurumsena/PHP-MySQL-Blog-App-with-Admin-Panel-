@@ -8,11 +8,11 @@ if (!defined('DB_HOST')) {
 }
 
 if (!defined('DB_USER')) {
-    define('DB_USER', 'sena');
+    define('DB_USER', 'root');
 }
 
 if (!defined('DB_PASS')) {
-    define('DB_PASS', 'sena2323');
+    define('DB_PASS', '');
 }
 
 if (!defined('DB_NAME')) {

@@ -3,7 +3,7 @@
 
     <footer>
         <div class="footer__social">
-            <a href="https://www.instagram.com/skurum/" target="_blank"><i class="uil uil-instagram"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="uil uil-instagram"></i></a>
             <a href="https://www.linkedin.com/in/semasenakurum/" target="_blank"><i class="uil uil-linkedin"></i></a>
         </div>
         <div class="container footer__container">

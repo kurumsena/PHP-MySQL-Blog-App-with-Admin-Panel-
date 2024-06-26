@@ -1,8 +1,12 @@
-<?php 
-session_start();
+<?php
+// Oturum başlatma kontrolü
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-define ('ROOT_URL', 'http://localhost/blog/');
+// Sabit tanımları
+define('ROOT_URL', 'http://localhost/blog/');
 define('DB_HOST', 'localhost');
-define('DB_USER', 'sena');
-define('DB_PASS', 'sena2323');
-define('DB_NAME', 'blog'); 
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'blog');

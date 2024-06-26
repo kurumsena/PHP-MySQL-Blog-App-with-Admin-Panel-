@@ -87,7 +87,7 @@ $categories = mysqli_query($connection, $query);
                 </li>
                 <li>
                     <a href="add-category.php"><i class="uil uil-edit"></i>
-                        <h5>Kategorileri Düzenle</h5>
+                        <h5>Kategori Ekle</h5>
 
                     </a>
                 </li>
