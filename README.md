@@ -120,7 +120,7 @@ When a user clicks on a category title, a PHP code is used to retrieve posts rel
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/bbc7586d-4fcb-4712-8431-ae7e0145449b)
 
 
-**Warning: No posts found for this category**
+However, in some cases, there may be no posts belonging to a particular category. In this situation, the user receives a warning message as follows:
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/b19738bf-2647-437e-9340-da01fa60adf5)
 
