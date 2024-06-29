@@ -1,3 +1,4 @@
+# PHP-MySQL-Blog-App-with-Admin-Panel
 This project is a blog application developed using PHP and MySQL. It includes an admin panel for managing blog posts, categories, and users. 
 
 # Registration
@@ -20,13 +21,18 @@ Below is a screenshot of our web application's login screen. Users can access th
 
 # Admin Panel - Dashboard 
 
-The dashboard screen provides access to various management options, allowing users to oversee different areas of the application. 
+The dashboard screen provides access to various management options, allowing users to oversee different application areas.
 
 **Add Post:** Create and publish new content.
+
 **Manage Posts:** Edit existing posts, perform deletion operations.
+
 **Add User:** Add new users and manage account settings.
+
 **Manage Users:** Edit permissions of existing users, perform actions on accounts.
+
 **Add Category:** Create new categories and categorize your posts.
+
 **Manage Categories:** Edit existing categories, perform deletion operations.
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/51d77f09-74ff-401b-9362-db34cf7ca93d)
@@ -34,9 +40,13 @@ The dashboard screen provides access to various management options, allowing use
 
 # Adding a Post
 **Enter Title:** Enter a suitable title for your post. The title should summarize the main theme or content of your post.
+
 **Select Category:** Assign your post to an appropriate category. Categories help organize content and facilitate easy searching for visitors.
+
 **Write Content:** Write the details of your post in the "Text" field. Here, express the descriptions, details, or content of your post in detail.
+
 **Add Image (Optional):** If you wish to add visual content, upload the image file using the "Add Image" option and include it in your post.
+
 **Publish or Save Post:** After preparing your post, click the "Add Post" button to complete the process.
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/f7e75209-ca00-4d95-bfc8-5b80946a2817)
@@ -44,7 +54,9 @@ The dashboard screen provides access to various management options, allowing use
 
 # Managing Posts
 **Editing a Post:** Click on the "Edit" button next to the respective post to edit it. Here, you can update the title, content, or category of the post.
+
 **Deleting a Post:** To permanently delete a post, click on the "Delete" button next to the respective post. This action removes the post completely from the database.
+
 **Saving Changes:** After editing or deleting a post, click the "Save Changes" button at the bottom of the page to save your modifications. 
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/771cc33d-ee51-4b59-a78c-61ca089b7914)
@@ -85,7 +97,7 @@ The "Manage Categories" section in the admin panel facilitates the editing and d
 
 
 # Categories Database Table
-The categories management database table used in my web application developed with PHP and MySQL. This table stores titles and descriptions of categories defined within the application. Each category added or modified by our users is recorded in this table and dynamically utilized by the application.
+The categories management database table used in my web application was developed with PHP and MySQL. This table stores titles and descriptions of categories defined within the application. Each category added or modified by our users is recorded in this table and dynamically utilized by the application.
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/10195994-5a59-4055-ab40-cf6e5cf15a06)
 
