@@ -57,7 +57,7 @@ The dashboard screen provides access to various management options, allowing use
 
 **Deleting a Post:** To permanently delete a post, click on the "Delete" button next to the respective post. This action removes the post completely from the database.
 
-**Saving Changes:** After editing or deleting a post, click the "Save Changes" button at the bottom of the page to save your modifications. 
+**Saving Changes:** After editing or deleting a post, click the "Edit post" button at the bottom of the page to save your modifications. 
 
 ![image](https://github.com/kurumsena/PHP-MySQL-Blog-App-with-Admin-Panel-/assets/132753845/771cc33d-ee51-4b59-a78c-61ca089b7914)
 
