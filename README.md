@@ -45,7 +45,7 @@ The dashboard screen provides access to various management options, allowing use
 
 **Write Content:** Write the details of your post in the "Text" field. Here, express the descriptions, details, or content of your post in detail.
 
-**Add Image (Optional):** If you wish to add visual content, upload the image file using the "Add Image" option and include it in your post.
+**Add Image (Optional):** If you wish to add visual content, upload the image file using the "Upload file" option and include it in your post.
 
 **Publish or Save Post:** After preparing your post, click the "Add Post" button to complete the process.
 
